@@ -20,5 +20,5 @@ if [[ "$ref" == refs/tags/v* ]]; then
     fi
     printf '%s~ubuntu24.04-1\n' "$base"
 else
-    printf '%s~git%s.%s~ubuntu24.04-1\n' "$base" "$(date -u +%Y%m%d)" "${sha:0:7}"
+    printf '%s~git%s.%s~ubuntu24.04-1\n' "$base" "$(date -u +%Y%m%d%H%M%S)" "${sha:0:7}"
 fi

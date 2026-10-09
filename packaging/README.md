@@ -50,7 +50,7 @@ and JavaScript syntax, validates schemas, installs the package, opens both
 preferences pages with GJS under Xvfb, and verifies package removal.
 Successful builds upload the `.deb` as `deb-ubuntu-24.04-gnome-46`.
 
-`packaging/control` holds the base version. CI snapshots include the UTC date
+`packaging/control` holds the base version. CI snapshots include the UTC build timestamp
 and commit SHA and sort below the corresponding release. To build a snapshot
 locally, pass `--build-arg PACKAGE_VERSION="$(bash packaging/ci-version.sh)"`
 to `docker build`.
