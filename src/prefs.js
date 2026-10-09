@@ -245,7 +245,7 @@ const ShortcutsPage = GObject.registerClass(
                 group.set_description(note);
             for (const [label, accel] of entries) {
                 const row = new Adw.ActionRow({ title: label });
-                const shortcut = new Adw.ShortcutLabel({ accelerator: accel });
+                const shortcut = new Gtk.ShortcutLabel({ accelerator: accel });
                 shortcut.set_valign(Gtk.Align.CENTER);
                 row.add_suffix(shortcut);
                 group.add(row);
@@ -271,7 +271,7 @@ const ShortcutsPage = GObject.registerClass(
             for (const [label, key] of entries) {
                 const row = new Adw.ActionRow({ title: label });
                 const accels = shellSettings.get_strv(key);
-                const shortcut = new Adw.ShortcutLabel({ accelerator: accels[0] ?? '' });
+                const shortcut = new Gtk.ShortcutLabel({ accelerator: accels[0] ?? '' });
                 shortcut.set_valign(Gtk.Align.CENTER);
                 row.add_suffix(shortcut);
                 group.add(row);
