@@ -97,11 +97,10 @@ function _saveToDiskAsync(bytes, format = 'png') {
 }
 
 function _showToast(file, pixbuf, copyOnly) {
-    const coglContext = global.stage.context.get_backend().get_cogl_context();
     const pixels = pixbuf.read_pixel_bytes();
     const imageContent = St.ImageContent.new_with_preferred_size(pixbuf.width, pixbuf.height);
     imageContent.set_bytes(
-        coglContext, pixels, Cogl.PixelFormat.RGBA_8888,
+        pixels, Cogl.PixelFormat.RGBA_8888,
         pixbuf.width, pixbuf.height, pixbuf.rowstride
     );
     showScreenshotToast(file, imageContent, pixbuf.width, pixbuf.height, copyOnly);

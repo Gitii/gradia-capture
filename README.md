@@ -22,12 +22,34 @@ Includes features like annotations, custom saving options and integration with t
 > [!IMPORTANT]
 > The [GNOME Code of Conduct](https://conduct.gnome.org) applies to this project, including this repository.
 
-## Setup
+## Gitii GNOME 46 fork
+
+This fork packages Gradia Capture for **GNOME Shell 46 / Ubuntu 24.04**.
+The screenshot preview and preferences APIs are backported from upstream,
+and the GNOME 46 PoC has been tried successfully on a desktop.
+
+Download a `.deb` from [Releases](https://github.com/Gitii/gradia-capture/releases)
+or the `deb-ubuntu-24.04-gnome-46` artifact of a successful
+[Build workflow](https://github.com/Gitii/gradia-capture/actions/workflows/build.yml).
+Install the downloaded package with `sudo apt install ./gnome-shell-extension-gradia-capture_*.deb`,
+log out and back in, then enable it:
+
+```sh
+gnome-extensions enable gradia-integration@alexandervanhee.github.io
+```
+
+Press **Print Screen** to open the screenshot overlay and annotation toolbar.
+Gradia's Flatpak is optional for editing/OCR integration.
+
+See [Docker build and packaging instructions](packaging/README.md) for local builds,
+CI checks, releases and removal.
+
+## Setup from source
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/AlexanderVanhee/gradia-capture.git
+git clone https://github.com/Gitii/gradia-capture.git
 cd gradia-capture
 ```
 

@@ -1,0 +1,13 @@
+Package: gnome-shell-extension-gradia-capture
+Version: 0.1.0
+Section: gnome
+Priority: optional
+Architecture: all
+Maintainer: Gitii <gitii@users.noreply.github.com>
+Depends: gnome-shell (>= 46~), gnome-shell (<< 47~), gir1.2-adw-1 (>= 1.4), gir1.2-gtk-4.0 (>= 4.12), gir1.2-gdkpixbuf-2.0, gir1.2-pango-1.0
+Suggests: flatpak, xdg-desktop-portal-gnome
+Homepage: https://github.com/Gitii/gradia-capture
+Description: Screenshot annotations for GNOME Shell 46 (proof of concept)
+ Adds drawing tools and custom saving options to GNOME's screenshot overlay.
+ Optional Gradia Flatpak integration provides editing and OCR.
+ This package contains a GNOME 46 backport of upstream commit f70a212.
